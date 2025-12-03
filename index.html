@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Ícones e JQuery -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 
     <title>TeethCare</title>
 </head>
@@ -14,21 +19,15 @@
         <nav id="navbar">
             <i id="nav_logo">TeethCare</i>
             <ul id="nav_list">
-                <li class="nav-item active">
-                    <a href="#home">Início</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#endereco">Endereços</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#avaliacoes">Avaliações</a>
-                </li>
+                <li class="nav-item active"><a href="#home">Início</a></li>
+                <li class="nav-item"><a href="#endereco">Endereços</a></li>
+                <li class="nav-item"><a href="#avaliacoes">Avaliações</a></li>
             </ul>
 
-            <button class="btn-default">
+            <!-- ID adicionado para o JS achar -->
+            <button class="btn-default" id="btn-agendar-nav">
                 Agendar
             </button>
-
         </nav>
     </header>
 
@@ -37,22 +36,22 @@
             <div class="shape"></div>
             <div id="cta">
                 <h1 class="title">
-                    Transformando sorrisos, transformando vidas</span>
+                    Transformando sorrisos, transformando <span>vidas</span>
                 </h1>
-
                 <p class="description">
                     Venha transformar seu sorriso em confiança! <br>
-                    Nos contate no WhatsApp e verifique a disponibilidade para a consulta!
+                    Agende sua avaliação agora mesmo.
                 </p>
-
                 <div id="cta_buttons">
-                    <a href="#" class="btn-default">
+                    <!-- ID adicionado para o JS achar -->
+                    <a href="#" class="btn-default" id="btn-agendar-hero">
                         Agendar
                     </a>
                 </div>
-
+            </div>
             <div id="banner">
-                <img src="./pngegg.png" alt="">
+                <!-- Mantendo sua imagem original -->
+                <img src="./pngegg.png" alt="Dentista Sorrindo">
             </div>
         </section>
 
@@ -62,78 +61,36 @@
 
             <div id="locals">
                 <div class="local">
-                        <div class="local-teeth"></div>
-                    <h3 id="local-title">
-                        Consolação
-                    </h3>
-
-                    <span id="local-description">
-                        Venha conheçer a nosso consultório da Consolação <br>
-                        R. da Consolação, 847
-                    </span>
+                    <div class="local-teeth"><i class="fa-solid fa-tooth"></i></div>
+                    <h3 id="local-title">Consolação</h3>
+                    <span id="local-description">R. da Consolação, 847</span>
                 </div>
 
                 <div class="local">
-                    <div class="local-teeth"></div>
-
-                    <h3 id="local-title">
-                        Tatuapé
-                    </h3>
-
-                    <span id="local-description">
-                        Venha conheçer a nosso consultório da Tatuapé <br>
-                        R. Cantagalo, 421
-                    </span>
+                    <div class="local-teeth"><i class="fa-solid fa-tooth"></i></div>
+                    <h3 id="local-title">Tatuapé</h3>
+                    <span id="local-description">R. Cantagalo, 421</span>
                 </div>
             </div>
-        
         </section>
 
         <section id="avaliacoes">
-
             <div id="avaliacoes_content">
                 <h2 class="section-title">Avaliações</h2>
                 <h3 class="section-subtitle">O que dizem sobre nós?</h3>
-
                 <div id="feedbacks">
                     <div class="feedback">
                         <img src="./one-piece-sign-main.png" class="feedback-avatar" alt="">
-
                         <div class="feedback-content">
-                            <p>
-                                 Nome
-                                <span>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </span>
-                            </p>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias repellat recusandae labore dolorum fuga ipsa. Quo dolore, expedita voluptates provident inventore modi ipsam ducimus dolorem magnam. Necessitatibus debitis ipsam nihil.
-                            </p>
+                            <p>João Silva <span>⭐⭐⭐⭐⭐</span></p>
+                            <p>Atendimento excelente e muito rápido!</p>
                         </div>
                     </div>
-
-
                     <div class="feedback">
                         <img src="./d030e7eeac27a4b7a965604f6adc0d62.png" class="feedback-avatar" alt="">
-
                         <div class="feedback-content">
-                            <p>
-                                Nome
-                                <span>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </span>
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, at! Pariatur, necessitatibus deleniti? Tempora quos ab culpa quisquam laudantium, ipsum libero minus veniam labore porro architecto perferendis enim fugiat sed!
-                            </p>
+                            <p>Maria Souza <span>⭐⭐⭐⭐⭐</span></p>
+                            <p>Amei o resultado do clareamento.</p>
                         </div>
                     </div>
                 </div>
@@ -141,19 +98,51 @@
         </section>
     </main>
 
+    <!-- O NOVO MODAL (Fica invisível até clicar) -->
+    <div id="modal-overlay">
+        <div class="modal-box">
+            <span class="close-modal">&times;</span>
+            <h2>Agendar Consulta</h2>
+            <form id="agendamento-form">
+                <div class="form-group">
+                    <label>Nome Completo</label>
+                    <input type="text" id="nome" required>
+                </div>
+                <div class="form-group">
+                    <label>CPF</label>
+                    <input type="text" id="cpf" placeholder="000.000.000-00" required>
+                </div>
+                <div class="form-group">
+                    <label>Serviço</label>
+                    <select id="servico">
+                        <option value="1">Limpeza</option>
+                        <option value="2">Extração</option>
+                        <option value="3">Canal</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Dentista</label>
+                    <select id="dentista">
+                        <option value="1">Dr. Ricardo</option>
+                        <option value="2">Dra. Beatriz</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Data</label>
+                    <input type="datetime-local" id="data" required>
+                </div>
+                <button type="submit" class="btn-default" style="width:100%; margin-top:10px;">Confirmar</button>
+            </form>
+        </div>
+    </div>
+
     <footer>
         <img src="./wave.svg" alt="">
-
         <div id="footer_items">
-            <span id="copyright">
-                &copy 2025 João Santana
-            </span>
-            </div>
+            <span id="copyright">&copy; 2025 João Santana</span>
         </div>
     </footer>
 
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
